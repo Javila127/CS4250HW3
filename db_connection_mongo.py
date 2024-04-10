@@ -1,9 +1,12 @@
 #-------------------------------------------------------------------------
-# AUTHOR: your name
-# FILENAME: title of the source file
-# SPECIFICATION: description of the program
+# AUTHOR: James Avila
+# FILENAME: db_connections_mongo.py
+# SPECIFICATION: This file acts as the back-end for this project. It establishes the
+# connection to the nosql database and ensures it is accessible
+# to the front end for CRUD operations. Additionally it manages the index of terms in-
+# order to provided an inverted index to the user.
 # FOR: CS 4250- Assignment #3
-# TIME SPENT: how long it took you to complete the assignment
+# TIME SPENT: 1 hour
 #-----------------------------------------------------------*/
 
 #IMPORTANT NOTE: DO NOT USE ANY ADVANCED PYTHON LIBRARY TO COMPLETE THIS CODE SUCH AS numpy OR pandas. You have to work here only with
@@ -17,7 +20,6 @@ import string
 def connectDataBase():
 
     # Creating a database connection object using pymongo
-
     DB_NAME = "CPP"
     DB_HOST = "localhost"
     DB_PORT = 27017
@@ -34,7 +36,7 @@ def connectDataBase():
 
 def createDocument(col, docId, docText, docTitle, docDate, docCat):
 
-    # removing punctuation from text
+    # removing punctuation from text for collections later
     translator = str.maketrans('', '', string.punctuation)
     clean_text = docText.translate(translator)
 

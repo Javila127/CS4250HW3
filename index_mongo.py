@@ -1,9 +1,10 @@
 #-------------------------------------------------------------------------
-# AUTHOR: your name
-# FILENAME: title of the source file
-# SPECIFICATION: description of the program
+# AUTHOR: James Avila
+# FILENAME: index_mongo.py
+# SPECIFICATION: This file acts as the front-end for this project. It prompts the user with
+# a menu of CRUD operations for the document/index databases.
 # FOR: CS 4250- Assignment #3
-# TIME SPENT: how long it took you to complete the assignment
+# TIME SPENT: N/A for index_mongo.py
 #-----------------------------------------------------------*/
 
 from pymongo import MongoClient  # import mongo client to connect
